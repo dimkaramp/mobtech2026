@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://dghk6rkfcgoh0"]
+
+[ext_resource type="Script" uid="uid://diw6movhybpbp" path="res://main.gd" id="1_ig7tw"]
+
+[sub_resource type="Theme" id="Theme_iaofp"]
+default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_7w4th"]
+default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_1rh38"]
+default_font_size = 35
+
+[sub_resource type="Theme" id="Theme_jk82l"]
+default_font_size = 10
+
+[sub_resource type="Theme" id="Theme_84sv8"]
+default_font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_1rh38"]
+font_size = 55
+outline_size = 3
+
+[node name="Main" type="Control" unique_id=2056389604]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_ig7tw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2103012861]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09835673, 0.39893413, 0.8458149, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=322943240]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -93.0
+offset_right = 56.0
+offset_bottom = 80.333374
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer" unique_id=1810653030]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.5
+theme = SubResource("Theme_iaofp")
+text = "Start"
+
+[node name="Button2" type="Button" parent="ColorRect/VBoxContainer" unique_id=1795959322]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.5
+theme = SubResource("Theme_7w4th")
+text = "Options"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect" unique_id=2047918322]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.5
+offset_top = -73.0
+offset_right = 236.5
+offset_bottom = 73.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+theme_override_constants/separation = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer2" unique_id=973321146]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer2/HBoxContainer" unique_id=1731355669]
+layout_mode = 2
+theme = SubResource("Theme_1rh38")
+text = "Sensitivity  "
+
+[node name="HSlider" type="HSlider" parent="ColorRect/VBoxContainer2/HBoxContainer" unique_id=20254982]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = SubResource("Theme_jk82l")
+tick_count = 100
+ticks_position = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/VBoxContainer2" unique_id=470373312]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer2/HBoxContainer2" unique_id=1768903731]
+layout_mode = 2
+theme = SubResource("Theme_1rh38")
+text = "Deadzone  "
+
+[node name="HSlider" type="HSlider" parent="ColorRect/VBoxContainer2/HBoxContainer2" unique_id=212549645]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = SubResource("Theme_jk82l")
+tick_count = 100
+ticks_position = 3
+
+[node name="Back" type="Button" parent="ColorRect/VBoxContainer2" unique_id=309613360]
+layout_mode = 2
+theme = SubResource("Theme_84sv8")
+text = "Back To Menu"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="." unique_id=1875621073]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 219.0
+grow_horizontal = 2
+text = "Tech Demo"
+label_settings = SubResource("LabelSettings_1rh38")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer2/Back" to="." method="_on_back_pressed"]

@@ -1,0 +1,694 @@
+[gd_scene format=3 uid="uid://detla32cdftcr"]
+
+[ext_resource type="Script" uid="uid://b0lfoj1wdu414" path="res://level.gd" id="1_u52ul"]
+[ext_resource type="Script" uid="uid://c05yfiaqd6uuc" path="res://rigid_body_3d.gd" id="2_vonw3"]
+[ext_resource type="Texture2D" uid="uid://b4jhyu7frfaas" path="res://textures/Checkerboard_pattern.svg" id="3_oi3di"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_oi3di"]
+
+[sub_resource type="Sky" id="Sky_1ainy"]
+sky_material = SubResource("ProceduralSkyMaterial_oi3di")
+
+[sub_resource type="Environment" id="Environment_1rh38"]
+background_mode = 2
+sky = SubResource("Sky_1ainy")
+ambient_light_source = 3
+reflected_light_source = 2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u52ul"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1rh38"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f2txt"]
+disable_fog = true
+albedo_color = Color(1.4439226e-07, 0.5518735, 0.58915, 1)
+albedo_texture = ExtResource("3_oi3di")
+metallic = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u52ul"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_1rh38"]
+material = SubResource("StandardMaterial3D_u52ul")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1rh38"]
+size = Vector3(5, 0.4, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jk82l"]
+size = Vector3(5, 0.4, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kp1w4"]
+size = Vector3(7, 0.4, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0b4ue"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fmulq"]
+material = SubResource("StandardMaterial3D_0b4ue")
+size = Vector3(7, 0.4, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u52ul"]
+size = Vector3(7.5, 0.4, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vonw3"]
+size = Vector3(7.5, 0.4, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vonw3"]
+albedo_color = Color(1, 0.11774104, 0.1428257, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oi3di"]
+material = SubResource("StandardMaterial3D_vonw3")
+size = Vector3(7, 0.4, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ainy"]
+albedo_color = Color(0.086104214, 0.47312066, 0.086104214, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n6hdu"]
+material = SubResource("StandardMaterial3D_1ainy")
+size = Vector3(7, 0.4, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_km5ld"]
+material = SubResource("StandardMaterial3D_0b4ue")
+size = Vector3(7, 0.4, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n6hdu"]
+albedo_texture = ExtResource("3_oi3di")
+uv1_scale = Vector3(14.8, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_i2t4f"]
+material = SubResource("StandardMaterial3D_n6hdu")
+size = Vector3(7, 0.4, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vonw3"]
+size = Vector3(10, 0.4, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0b4ue"]
+size = Vector3(10, 0.4, 2)
+
+[sub_resource type="Theme" id="Theme_1rh38"]
+default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_jk82l"]
+default_font_size = 30
+
+[sub_resource type="Theme" id="Theme_84sv8"]
+default_font_size = 30
+
+[sub_resource type="Theme" id="Theme_vonw3"]
+
+[sub_resource type="FontFile" id="FontFile_vonw3"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/17/0/ascent = 0.0
+cache/0/17/0/descent = 0.0
+cache/0/17/0/underline_position = 0.0
+cache/0/17/0/underline_thickness = 0.0
+cache/0/17/0/scale = 1.0
+cache/0/18/0/ascent = 0.0
+cache/0/18/0/descent = 0.0
+cache/0/18/0/underline_position = 0.0
+cache/0/18/0/underline_thickness = 0.0
+cache/0/18/0/scale = 1.0
+cache/0/19/0/ascent = 0.0
+cache/0/19/0/descent = 0.0
+cache/0/19/0/underline_position = 0.0
+cache/0/19/0/underline_thickness = 0.0
+cache/0/19/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/23/0/ascent = 0.0
+cache/0/23/0/descent = 0.0
+cache/0/23/0/underline_position = 0.0
+cache/0/23/0/underline_thickness = 0.0
+cache/0/23/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/26/0/ascent = 0.0
+cache/0/26/0/descent = 0.0
+cache/0/26/0/underline_position = 0.0
+cache/0/26/0/underline_thickness = 0.0
+cache/0/26/0/scale = 1.0
+cache/0/27/0/ascent = 0.0
+cache/0/27/0/descent = 0.0
+cache/0/27/0/underline_position = 0.0
+cache/0/27/0/underline_thickness = 0.0
+cache/0/27/0/scale = 1.0
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/29/0/ascent = 0.0
+cache/0/29/0/descent = 0.0
+cache/0/29/0/underline_position = 0.0
+cache/0/29/0/underline_thickness = 0.0
+cache/0/29/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/31/0/ascent = 0.0
+cache/0/31/0/descent = 0.0
+cache/0/31/0/underline_position = 0.0
+cache/0/31/0/underline_thickness = 0.0
+cache/0/31/0/scale = 1.0
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/33/0/ascent = 0.0
+cache/0/33/0/descent = 0.0
+cache/0/33/0/underline_position = 0.0
+cache/0/33/0/underline_thickness = 0.0
+cache/0/33/0/scale = 1.0
+cache/0/34/0/ascent = 0.0
+cache/0/34/0/descent = 0.0
+cache/0/34/0/underline_position = 0.0
+cache/0/34/0/underline_thickness = 0.0
+cache/0/34/0/scale = 1.0
+cache/0/35/0/ascent = 0.0
+cache/0/35/0/descent = 0.0
+cache/0/35/0/underline_position = 0.0
+cache/0/35/0/underline_thickness = 0.0
+cache/0/35/0/scale = 1.0
+cache/0/36/0/ascent = 0.0
+cache/0/36/0/descent = 0.0
+cache/0/36/0/underline_position = 0.0
+cache/0/36/0/underline_thickness = 0.0
+cache/0/36/0/scale = 1.0
+cache/0/37/0/ascent = 0.0
+cache/0/37/0/descent = 0.0
+cache/0/37/0/underline_position = 0.0
+cache/0/37/0/underline_thickness = 0.0
+cache/0/37/0/scale = 1.0
+cache/0/38/0/ascent = 0.0
+cache/0/38/0/descent = 0.0
+cache/0/38/0/underline_position = 0.0
+cache/0/38/0/underline_thickness = 0.0
+cache/0/38/0/scale = 1.0
+cache/0/39/0/ascent = 0.0
+cache/0/39/0/descent = 0.0
+cache/0/39/0/underline_position = 0.0
+cache/0/39/0/underline_thickness = 0.0
+cache/0/39/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_jk82l"]
+font = SubResource("FontFile_vonw3")
+font_size = 40
+outline_size = 2
+
+[sub_resource type="Theme" id="Theme_kp1w4"]
+default_font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_1rh38"]
+font_size = 50
+
+[sub_resource type="Theme" id="Theme_f2txt"]
+default_font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_vonw3"]
+font_size = 50
+
+[sub_resource type="FontFile" id="FontFile_0b4ue"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/23/0/ascent = 0.0
+cache/0/23/0/descent = 0.0
+cache/0/23/0/underline_position = 0.0
+cache/0/23/0/underline_thickness = 0.0
+cache/0/23/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/26/0/ascent = 0.0
+cache/0/26/0/descent = 0.0
+cache/0/26/0/underline_position = 0.0
+cache/0/26/0/underline_thickness = 0.0
+cache/0/26/0/scale = 1.0
+cache/0/27/0/ascent = 0.0
+cache/0/27/0/descent = 0.0
+cache/0/27/0/underline_position = 0.0
+cache/0/27/0/underline_thickness = 0.0
+cache/0/27/0/scale = 1.0
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/29/0/ascent = 0.0
+cache/0/29/0/descent = 0.0
+cache/0/29/0/underline_position = 0.0
+cache/0/29/0/underline_thickness = 0.0
+cache/0/29/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_oi3di"]
+default_font = SubResource("FontFile_0b4ue")
+default_font_size = 30
+
+[node name="Level" type="Node3D" unique_id=1542254348]
+process_mode = 3
+physics_interpolation_mode = 1
+script = ExtResource("1_u52ul")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=416082223]
+environment = SubResource("Environment_1rh38")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1809848580]
+
+[node name="LevelTimer" type="Timer" parent="." unique_id=357929790]
+wait_time = 40.0
+one_shot = true
+
+[node name="FinishLineTimer" type="Timer" parent="." unique_id=756313552]
+wait_time = 0.1
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=1501856016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=1514805682]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.5)
+current = true
+fov = 37.849285
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=423902546]
+axis_lock_linear_z = true
+physics_material_override = SubResource("PhysicsMaterial_u52ul")
+contact_monitor = true
+max_contacts_reported = 2
+script = ExtResource("2_vonw3")
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="RigidBody3D" unique_id=234080021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+remote_path = NodePath("../../CameraPivot")
+update_rotation = false
+update_scale = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=2110492762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("SphereShape3D_1rh38")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D" unique_id=1706332084]
+material_override = SubResource("StandardMaterial3D_f2txt")
+mesh = SubResource("SphereMesh_1rh38")
+
+[node name="Start" type="StaticBody3D" parent="." unique_id=1863307757 groups=["Platforms", "Start"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Start" unique_id=295429786]
+shape = SubResource("BoxShape3D_1rh38")
+debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Start" unique_id=726614709]
+mesh = SubResource("BoxMesh_jk82l")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1274618893 groups=["Platforms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=1953389858]
+shape = SubResource("BoxShape3D_kp1w4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=1651686292]
+mesh = SubResource("BoxMesh_fmulq")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=1317495786 groups=["Platforms"]]
+transform = Transform3D(0.9155505, -0.4021754, -0.0047252625, 0.4014265, 0.9144492, -0.05137515, 0.02498283, 0.045139708, 0.9986684, 15.202594, -3.2715764, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" unique_id=1736117982]
+shape = SubResource("BoxShape3D_u52ul")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3" unique_id=1201051943]
+mesh = SubResource("BoxMesh_vonw3")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=1679398133 groups=["Platforms", "Red_nodes"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.014312, -6.732168, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4" unique_id=759400887]
+shape = SubResource("BoxShape3D_kp1w4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4" unique_id=1010038298]
+mesh = SubResource("BoxMesh_oi3di")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="." unique_id=1612589332 groups=["Green_nodes", "Platforms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.69119, -2.9854338, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D5" unique_id=13274472]
+shape = SubResource("BoxShape3D_kp1w4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D5" unique_id=129169063]
+mesh = SubResource("BoxMesh_n6hdu")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="." unique_id=90130532 groups=["Platforms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.618195, -7.0911207, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6" unique_id=1179689823]
+shape = SubResource("BoxShape3D_kp1w4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D6" unique_id=1888106560]
+mesh = SubResource("BoxMesh_km5ld")
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="." unique_id=2130146891 groups=["Platforms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.618195, -7.0911207, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D7" unique_id=589354543]
+shape = SubResource("BoxShape3D_kp1w4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D7" unique_id=840691052]
+mesh = SubResource("BoxMesh_fmulq")
+
+[node name="StaticBody3D8" type="StaticBody3D" parent="." unique_id=602969021 groups=["Platforms"]]
+transform = Transform3D(0.9940732, -0.10871268, 0, 0.10871268, 0.9940732, 0, 0, 0, 1, 23.772259, -7.386835, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D8" unique_id=2057771994]
+shape = SubResource("BoxShape3D_kp1w4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D8" unique_id=1179702718]
+mesh = SubResource("BoxMesh_fmulq")
+
+[node name="StaticBody3D9" type="StaticBody3D" parent="." unique_id=1249879158 groups=["Platforms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.194492, -7.3623075, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D9" unique_id=1031028911]
+shape = SubResource("BoxShape3D_kp1w4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D9" unique_id=1128477824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.008227348, 0)
+mesh = SubResource("BoxMesh_fmulq")
+
+[node name="StaticBody3D10" type="StaticBody3D" parent="." unique_id=1961669482 groups=["Platforms"]]
+transform = Transform3D(0.9696171, -0.24462754, 0, 0.24462754, 0.9696171, 0, 0, 0, 1, 38.54926, -6.8688674, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D10" unique_id=192657967]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016799927, -0.06658554, 0)
+shape = SubResource("BoxShape3D_kp1w4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D10" unique_id=1423139153]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.071722984, 0)
+mesh = SubResource("BoxMesh_fmulq")
+
+[node name="Finish" type="StaticBody3D" parent="." unique_id=1767411015 groups=["Finish", "Platforms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.11258, -6.433245, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Finish" unique_id=1024684579]
+shape = SubResource("BoxShape3D_kp1w4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Finish" unique_id=922214988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.004547596, 0)
+mesh = SubResource("BoxMesh_i2t4f")
+
+[node name="StaticBody3D11" type="StaticBody3D" parent="." unique_id=1030774772 groups=["Platforms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.313107, -3.087429, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D11" unique_id=1003728314]
+shape = SubResource("BoxShape3D_kp1w4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D11" unique_id=1268097414]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0015795231, 0)
+mesh = SubResource("BoxMesh_fmulq")
+
+[node name="StaticBody3D12" type="StaticBody3D" parent="." unique_id=500703995 groups=["Platforms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6453171, -2.189014, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D12" unique_id=803643003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1293602, -0.07001829, 0)
+shape = SubResource("BoxShape3D_vonw3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D12" unique_id=1723502254]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1164236, -0.071722984, 0)
+mesh = SubResource("BoxMesh_0b4ue")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2121299274]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=2088004282]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PauseButton" type="Button" parent="CanvasLayer/Control" unique_id=750195690]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -160.0
+offset_bottom = 80.0
+grow_horizontal = 0
+theme = SubResource("Theme_1rh38")
+text = "Pause"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=735027438]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.37600002)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/ColorRect" unique_id=984427957]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.46800002
+anchor_top = 0.42570755
+anchor_right = 0.55
+anchor_bottom = 0.554
+offset_left = -60.57605
+offset_top = -43.0
+offset_right = 47.399963
+offset_bottom = 58.207977
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="ResumeButton" type="Button" parent="CanvasLayer/Control/ColorRect/VBoxContainer" unique_id=28595078]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme = SubResource("Theme_jk82l")
+text = "Resume"
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/Control/ColorRect/VBoxContainer" unique_id=948752235]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme = SubResource("Theme_84sv8")
+text = "Quit"
+
+[node name="UIVBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=1262914597]
+layout_mode = 1
+offset_left = 76.0
+offset_right = 349.0
+offset_bottom = 226.0
+theme = SubResource("Theme_vonw3")
+theme_override_constants/separation = 0
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer/Control/UIVBoxContainer" unique_id=339606469]
+layout_mode = 2
+text = "
+"
+label_settings = SubResource("LabelSettings_jk82l")
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer/Control/UIVBoxContainer" unique_id=1010201004]
+layout_mode = 2
+text = "
+"
+label_settings = SubResource("LabelSettings_jk82l")
+
+[node name="DebuggingLabel" type="Label" parent="CanvasLayer/Control" unique_id=1666668151]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme = SubResource("Theme_kp1w4")
+
+[node name="Success" type="Control" parent="CanvasLayer" unique_id=849572549]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Success" unique_id=1509272759]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.37600002)
+
+[node name="Label" type="Label" parent="CanvasLayer/Success/ColorRect" unique_id=597669161]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 81.0
+grow_horizontal = 2
+text = "Well Done!"
+label_settings = SubResource("LabelSettings_1rh38")
+horizontal_alignment = 1
+
+[node name="ReturnToMenuButton" type="Button" parent="CanvasLayer/Success/ColorRect" unique_id=726148939]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -50.0
+offset_right = 125.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_f2txt")
+text = "Back To Menu"
+
+[node name="Failure" type="Control" parent="CanvasLayer" unique_id=993713173]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Failure" unique_id=1104634892]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 4.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.37600002)
+
+[node name="Label" type="Label" parent="CanvasLayer/Failure/ColorRect" unique_id=852404802]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 81.0
+grow_horizontal = 2
+text = "Level Failed!"
+label_settings = SubResource("LabelSettings_vonw3")
+horizontal_alignment = 1
+
+[node name="ReturnToMenuButton" type="Button" parent="CanvasLayer/Failure/ColorRect" unique_id=1417989823]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -50.0
+offset_right = 125.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_oi3di")
+text = "Back To Menu"
+
+[connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]
+[connection signal="body_entered" from="RigidBody3D" to="." method="_on_rigid_body_3d_body_entered"]
+[connection signal="pressed" from="CanvasLayer/Control/PauseButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/ColorRect/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/ColorRect/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Success/ColorRect/ReturnToMenuButton" to="." method="_on_return_to_menu_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Failure/ColorRect/ReturnToMenuButton" to="." method="_on_return_to_menu_button_pressed"]
